@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>publication</title>
+    <title>home</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="stylesheet" href="styles/publication.css">
+    <link rel="stylesheet" href="styles/submission.css">
+    <link rel="stylesheet" href="styles/aboutus.css">
 </head>
 <body>
 <!-- contact-bar -->
@@ -63,14 +64,45 @@
         </div>
     </nav>
     <!-- Registartion Heading -->
-    <!-- <div class="registration-heading">
-        <h2>Registration</h2>
-    </div> -->
+    <div class="registration-heading3">
+        <h2>Paper Submission</h2>
+    </div>
+    <div class="about1">
+        <div class="headabout1">
+           <h1>About ICSMSM</h1>
+        </div>
+       <p>It is mandatory that at least one author of all accepted papers have to register for the conference to ensure that the paper is included in the proceeding. Only registered authors are allowed to present their papers.
 
-    <!-- Image Conatiner -->
-     <div class="update">
-        <p>Journal : Will be update soon</p>
-     </div>
+           The registration fee covers the conference kit, access to all sessions, journal processing fee, coffee/tea, and working lunch. Accommodation on a payment basis will be arranged on request.
+           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere, quae mollitia, repellendus explicabo porro dolore maxime voluptate, iusto vel tempora eligendi officia dignissimos dolores rerum obcaecati illo. Minus, voluptatem necessitatibus.
+           Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam fugiat perferendis alias impedit assumenda mollitia quaerat modi necessitatibus. Dicta dolorum quos qui et rerum voluptatum suscipit illo adipisci in consectetur!Lorem
+           
+           </p>
+           <div class="headabout1">
+               <h1>ABOUT SVCET</h1>
+            </div>
+           <p>It is mandatory that at least one author of all accepted papers have to register for the conference to ensure that the paper is included in the proceeding. Only registered authors are allowed to present their papers.
+
+               The registration fee covers the conference kit, access to all sessions, journal processing fee, coffee/tea, and working lunch. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda esse, quasi adipisci quam accusamus quod earum. Consequuntur, in recusandae harum dolorum aliquam modi deserunt illo temporibus molestiae voluptate quam ullam!Lorem on a payment basis will be arranged on request.
+               
+               </p>
+   </div>
+   <form id="paperSubmissionForm" class="paper-form-container" 
+   action="http://localhost:5000/submit/papersubmit" 
+   method="POST" 
+   enctype="multipart/form-data">
+    <input type="text" id="paperName" class="paper-input" name="name" placeholder="Name" required>
+    <input type="text" id="paperInstitution" class="paper-input" name="institution" placeholder="Institution/Organization Name" required>
+    <input type="text" id="paperTitle" class="paper-input" name="title" placeholder="Paper Title" required>
+    <input type="email" id="paperEmail" class="paper-input" name="email" placeholder="Email" required>
+    <input type="tel" id="paperPhone" class="paper-input" name="phone" placeholder="Phone No" required>
+    <input type="text" id="paperResearchArea" class="paper-input" name="research_area" placeholder="Area of Research" required>
+    <input type="text" id="paperJournal" class="paper-input" name="journal" placeholder="Publication journal Name" required>
+    <input type="text" id="paperCountry" class="paper-input" name="country" placeholder="Country" required>
+    <input type="file" id="paperFileInput" class="paper-file-input" name="file" required>
+    <button type="submit" id="paperSubmitBtn" class="paper-submit-btn">SUBMIT</button>
+</form>
+
     <!-- footer -->
     <footer class="footer">
         <div class="footer-container" id="footer-container">

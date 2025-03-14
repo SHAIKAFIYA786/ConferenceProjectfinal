@@ -47,7 +47,7 @@
 .dropdown-menu {
     display: none;
     position: absolute;
-    background:green;
+    background:#7cb518;
     list-style: none;
     margin: 10px;
     /* color: black; */
@@ -98,7 +98,7 @@ h1 {
     transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-p {
+.about p {
     font-size: 1.1rem;
     line-height: 1.6;
     opacity: 0;
@@ -177,3 +177,5 @@ p {
     text-align: center;
   }
 }
+
+ 

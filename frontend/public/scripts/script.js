@@ -141,7 +141,6 @@ document.addEventListener("DOMContentLoaded", function () {
     revealOnScroll(); // Run on page load
 });
 
-// document.querySelector(".registration-form").addEventListener("submit", async (event) => {
 //     event.preventDefault();
 
 //     const formData = {
@@ -284,3 +283,202 @@ document.querySelector(".registration-form").addEventListener("submit", async fu
         alert("Error registering. Please try again.");
     }
 });
+document.querySelector(".registration-form").addEventListener("submit", async function (event) {
+    event.preventDefault();
+
+    const formData = {
+        name: document.querySelector("input[placeholder='Name']").value,
+        paperId: document.querySelector("input[placeholder='Paper ID']").value,
+        paperTitle: document.querySelector("input[placeholder='Paper Title']").value,
+        institution: document.querySelector("input[placeholder='Institution/Organization Name']").value,
+        phone: document.querySelector("input[placeholder='Phone No']").value,
+        email: document.querySelector("input[placeholder='Email']").value,
+        amountPaid: document.querySelector("input[placeholder='Amount Paid']").value,
+        journalName: document.querySelector("input[placeholder='Publication Journal Name']").value,
+        feePaid: document.querySelector("input[placeholder='Registration Fee Paid']").value,
+        transactionId: document.querySelector("input[placeholder='Transaction ID']").value,
+        date: document.querySelector("input[type='date']").value
+    };
+
+    console.log("🚀 Form Data to be Sent:", formData);
+
+    try {
+        const response = await fetch("http://localhost:5000/api/registrations/register", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(formData)
+        });
+
+        console.log("🚀 Fetch Response:", response);
+
+        const result = await response.json();
+        alert(result.message || "Registration Successful!");
+
+    } catch (error) {
+        console.error("❌ Fetch Error:", error);
+        alert("Error registering. Please try again.");
+    }
+});
+document.querySelector(".contact-form").addEventListener("submit", async function (event) {
+    event.preventDefault();
+
+    const formData = {
+        name: document.querySelector("input[placeholder='Your Name']").value,
+        email: document.querySelector("input[placeholder='Your Email']").value,
+        phoneNumber: document.querySelector("input[placeholder='Your Phone Number']").value,
+        message: document.querySelector("input[placeholder='our Message']").value,
+    };
+
+    console.log("🚀 Form Data to be Sent to contactacter:", formData);
+
+    try {
+        const response = await fetch("http://localhost:5000/api/contact/contact", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(formData)
+        });
+
+        console.log("🚀 Fetch Response:", response);
+
+        const result = await response.json();
+        alert(result.message || "Registration Successful!");
+
+    } catch (error) {
+        console.error("❌ Fetch Error:", error);
+        alert("Error registering. Please try again.");
+    }
+});
+// document.getElementById("paperSubmissionForm").addEventListener("submit", async function(event) {
+//     event.preventDefault(); // Prevent page refresh
+
+//     let formData = new FormData(this); // Collect form data
+
+//     try {
+//         let response = await fetch("http://localhost:5000/submit/papersubmit", { // Change URL if needed
+//             method: "POST",
+//             body: formData
+//         });
+
+//         let result = await response.json();
+
+//         if (response.ok) {
+//             alert("Form submitted successfully!");
+//             console.log("Response:", result);
+//         } else {
+//             alert("Error submitting form: " + result.error);
+//         }
+//     } catch (error) {
+//         console.error("Submission failed:", error);
+//         alert("Submission failed! Please try again.");
+//     }
+// });
+// comitee
+document.addEventListener("DOMContentLoaded", function () {
+    const details = document.querySelectorAll(".scientific-members h3, .scientific-members p");
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+            }
+        });
+    }, { threshold: 0.5 });
+
+    details.forEach(detail => observer.observe(detail));
+});
+document.addEventListener("DOMContentLoaded", function () {
+    const details = document.querySelectorAll(".scientific-members h3, .scientific-members p");
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+            }
+        });
+    }, { threshold: 0.2 });  // Reduced threshold for better triggering
+
+    details.forEach(detail => observer.observe(detail));
+});
+document.addEventListener("DOMContentLoaded", function () {
+    const details = document.querySelectorAll(".member-details");
+
+    if (details.length === 0) {
+        console.error("No member-details found! Check HTML class names.");
+        return;
+    }
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+            }
+        });
+    }, { threshold: 0.2 });  // Adjusted threshold for better triggering
+
+    details.forEach(detail => observer.observe(detail));
+});
+document.addEventListener("DOMContentLoaded", function () {
+    const committeeBox = document.querySelector(".scientific-committee-box");
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                committeeBox.classList.add("show");
+            }
+        });
+    }, { threshold: 0.5 }); // Trigger when 50% is visible
+
+    observer.observe(committeeBox);
+});
+document.addEventListener("DOMContentLoaded", function () {
+    const details = document.querySelectorAll(".member-details");
+
+    // ✅ REMOVE INTERSECTION OBSERVER SO DETAILS SHOW IMMEDIATELY
+    details.forEach(detail => detail.classList.add("show"));
+});
+document.addEventListener("DOMContentLoaded", function () {
+    const details = document.querySelectorAll(".member-details");
+
+    if (details.length === 0) {
+        console.error("No member-details found! Check HTML class names.");
+    }
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+            }
+        });
+    }, { threshold: 0.3 });
+
+    details.forEach(detail => observer.observe(detail));
+});
+document.addEventListener("DOMContentLoaded", function () {
+    const details = document.querySelectorAll(".member-details");
+    const committeeItems = document.querySelectorAll(".scientific-committee-box ul li");
+
+    if (details.length === 0) {
+        console.error("No member-details found! Check HTML class names.");
+    }
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+            }
+        });
+    }, { threshold: 0.3 });
+
+    details.forEach(detail => observer.observe(detail));
+    committeeItems.forEach(item => observer.observe(item));
+
+    // ✅ Force Apply Animation Speed on Load
+    setTimeout(() => {
+        committeeItems.forEach(item => item.style.transition = "transform 0.5s ease-out, opacity 0.5s ease-out");
+    }, 100);
+});
+window.onload = function() {
+    const image = document.querySelector(".container img");
+    if (image) {
+        image.classList.add("zoom");
+    }
+};
