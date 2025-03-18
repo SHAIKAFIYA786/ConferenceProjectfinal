@@ -1,0 +1,65 @@
+document.querySelector(".registration-form").addEventListener("submit", async function (event) {
+    event.preventDefault();
+
+    const formData = {
+        name: document.querySelector("input[placeholder='Name']").value,
+        paperId: document.querySelector("input[placeholder='Paper ID']").value,
+        paperTitle: document.querySelector("input[placeholder='Paper Title']").value,
+        institution: document.querySelector("input[placeholder='Institution/Organization Name']").value,
+        phone: document.querySelector("input[placeholder='Phone No']").value,
+        email: document.querySelector("input[placeholder='Email']").value,
+        amountPaid: document.querySelector("input[placeholder='Amount Paid']").value,
+        journalName: document.querySelector("input[placeholder='Publication Journal Name']").value,
+        feePaid: document.querySelector("input[placeholder='Registration Fee Paid']").value,
+        transactionId: document.querySelector("input[placeholder='Transaction ID']").value,
+        date: document.querySelector("input[type='date']").value
+    };
+
+    console.log("🚀 Form Data to be Sent:", formData);
+
+    try {
+        const response = await fetch("http://localhost:5000/api/registrations/register", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(formData)
+        });
+
+        console.log("🚀 Fetch Response:", response);
+
+        const result = await response.json();
+        alert(result.message || "Registration Successful!");
+
+    } catch (error) {
+        console.error("❌ Fetch Error:", error);
+        alert("Error registering. Please try again.");
+    }
+});
+document.querySelector(".contact-form").addEventListener("submit", async function (event) {
+    event.preventDefault();
+
+    const formData = {
+        name: document.querySelector("input[placeholder='Your Name']").value,
+        email: document.querySelector("input[placeholder='Your Email']").value,
+        phoneNumber: document.querySelector("input[placeholder='Your Phone Number']").value,
+        message: document.querySelector("input[placeholder='our Message']").value,
+    };
+
+    console.log("🚀 Form Data to be Sent to contactacter:", formData);
+
+    try {
+        const response = await fetch("http://localhost:5000/api/contact/contact", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(formData)
+        });
+
+        console.log("🚀 Fetch Response:", response);
+
+        const result = await response.json();
+        alert(result.message || "Registration Successful!");
+
+    } catch (error) {
+        console.error("❌ Fetch Error:", error);
+        alert("Error registering. Please try again.");
+    }
+});

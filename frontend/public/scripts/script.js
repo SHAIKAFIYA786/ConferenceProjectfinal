@@ -252,102 +252,102 @@ document.addEventListener("DOMContentLoaded", function () {
 //     }
 // });
 
-document.querySelector(".registration-form").addEventListener("submit", async function (event) {
-    event.preventDefault();
+// document.querySelector(".registration-form").addEventListener("submit", async function (event) {
+//     event.preventDefault();
 
-    const formData = {
-        name: document.querySelector("input[placeholder='Name']").value,
-        paperId: document.querySelector("input[placeholder='Paper ID']").value,
-        paperTitle: document.querySelector("input[placeholder='Paper Title']").value,
-        institution: document.querySelector("input[placeholder='Institution/Organization Name']").value,
-        phone: document.querySelector("input[placeholder='Phone No']").value,
-        email: document.querySelector("input[placeholder='Email']").value,
-        amountPaid: document.querySelector("input[placeholder='Amount Paid']").value,
-        journalName: document.querySelector("input[placeholder='Publication Journal Name']").value,
-        feePaid: document.querySelector("input[placeholder='Registration Fee Paid']").value,
-        transactionId: document.querySelector("input[placeholder='Transaction ID']").value,
-        date: document.querySelector("input[type='date']").value
-    };
-    console.log(formData);
-    try {
-        const response = await fetch("http://localhost:5000/api/registrations/register", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(formData)
-        });
+//     const formData = {
+//         name: document.querySelector("input[placeholder='Name']").value,
+//         paperId: document.querySelector("input[placeholder='Paper ID']").value,
+//         paperTitle: document.querySelector("input[placeholder='Paper Title']").value,
+//         institution: document.querySelector("input[placeholder='Institution/Organization Name']").value,
+//         phone: document.querySelector("input[placeholder='Phone No']").value,
+//         email: document.querySelector("input[placeholder='Email']").value,
+//         amountPaid: document.querySelector("input[placeholder='Amount Paid']").value,
+//         journalName: document.querySelector("input[placeholder='Publication Journal Name']").value,
+//         feePaid: document.querySelector("input[placeholder='Registration Fee Paid']").value,
+//         transactionId: document.querySelector("input[placeholder='Transaction ID']").value,
+//         date: document.querySelector("input[type='date']").value
+//     };
+//     console.log(formData);
+//     try {
+//         const response = await fetch("http://localhost:5000/api/registrations/register", {
+//             method: "POST",
+//             headers: { "Content-Type": "application/json" },
+//             body: JSON.stringify(formData)
+//         });
 
-        const result = await response.json();
-        alert(result.message || "Registration Successful!");
+//         const result = await response.json();
+//         alert(result.message || "Registration Successful!");
 
-    } catch (error) {
-        alert("Error registering. Please try again.");
-    }
-});
-document.querySelector(".registration-form").addEventListener("submit", async function (event) {
-    event.preventDefault();
+//     } catch (error) {
+//         alert("Error registering. Please try again.");
+//     }
+// });
+// document.querySelector(".registration-form").addEventListener("submit", async function (event) {
+//     event.preventDefault();
 
-    const formData = {
-        name: document.querySelector("input[placeholder='Name']").value,
-        paperId: document.querySelector("input[placeholder='Paper ID']").value,
-        paperTitle: document.querySelector("input[placeholder='Paper Title']").value,
-        institution: document.querySelector("input[placeholder='Institution/Organization Name']").value,
-        phone: document.querySelector("input[placeholder='Phone No']").value,
-        email: document.querySelector("input[placeholder='Email']").value,
-        amountPaid: document.querySelector("input[placeholder='Amount Paid']").value,
-        journalName: document.querySelector("input[placeholder='Publication Journal Name']").value,
-        feePaid: document.querySelector("input[placeholder='Registration Fee Paid']").value,
-        transactionId: document.querySelector("input[placeholder='Transaction ID']").value,
-        date: document.querySelector("input[type='date']").value
-    };
+//     const formData = {
+//         name: document.querySelector("input[placeholder='Name']").value,
+//         paperId: document.querySelector("input[placeholder='Paper ID']").value,
+//         paperTitle: document.querySelector("input[placeholder='Paper Title']").value,
+//         institution: document.querySelector("input[placeholder='Institution/Organization Name']").value,
+//         phone: document.querySelector("input[placeholder='Phone No']").value,
+//         email: document.querySelector("input[placeholder='Email']").value,
+//         amountPaid: document.querySelector("input[placeholder='Amount Paid']").value,
+//         journalName: document.querySelector("input[placeholder='Publication Journal Name']").value,
+//         feePaid: document.querySelector("input[placeholder='Registration Fee Paid']").value,
+//         transactionId: document.querySelector("input[placeholder='Transaction ID']").value,
+//         date: document.querySelector("input[type='date']").value
+//     };
 
-    console.log("🚀 Form Data to be Sent:", formData);
+//     console.log("🚀 Form Data to be Sent:", formData);
 
-    try {
-        const response = await fetch("http://localhost:5000/api/registrations/register", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(formData)
-        });
+//     try {
+//         const response = await fetch("http://localhost:5000/api/registrations/register", {
+//             method: "POST",
+//             headers: { "Content-Type": "application/json" },
+//             body: JSON.stringify(formData)
+//         });
 
-        console.log("🚀 Fetch Response:", response);
+//         console.log("🚀 Fetch Response:", response);
 
-        const result = await response.json();
-        alert(result.message || "Registration Successful!");
+//         const result = await response.json();
+//         alert(result.message || "Registration Successful!");
 
-    } catch (error) {
-        console.error("❌ Fetch Error:", error);
-        alert("Error registering. Please try again.");
-    }
-});
-document.querySelector(".contact-form").addEventListener("submit", async function (event) {
-    event.preventDefault();
+//     } catch (error) {
+//         console.error("❌ Fetch Error:", error);
+//         alert("Error registering. Please try again.");
+//     }
+// });
+// document.querySelector(".contact-form").addEventListener("submit", async function (event) {
+//     event.preventDefault();
 
-    const formData = {
-        name: document.querySelector("input[placeholder='Your Name']").value,
-        email: document.querySelector("input[placeholder='Your Email']").value,
-        phoneNumber: document.querySelector("input[placeholder='Your Phone Number']").value,
-        message: document.querySelector("input[placeholder='our Message']").value,
-    };
+//     const formData = {
+//         name: document.querySelector("input[placeholder='Your Name']").value,
+//         email: document.querySelector("input[placeholder='Your Email']").value,
+//         phoneNumber: document.querySelector("input[placeholder='Your Phone Number']").value,
+//         message: document.querySelector("input[placeholder='our Message']").value,
+//     };
 
-    console.log("🚀 Form Data to be Sent to contactacter:", formData);
+//     console.log("🚀 Form Data to be Sent to contactacter:", formData);
 
-    try {
-        const response = await fetch("http://localhost:5000/api/contact/contact", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(formData)
-        });
+//     try {
+//         const response = await fetch("http://localhost:5000/api/contact/contact", {
+//             method: "POST",
+//             headers: { "Content-Type": "application/json" },
+//             body: JSON.stringify(formData)
+//         });
 
-        console.log("🚀 Fetch Response:", response);
+//         console.log("🚀 Fetch Response:", response);
 
-        const result = await response.json();
-        alert(result.message || "Registration Successful!");
+//         const result = await response.json();
+//         alert(result.message || "Registration Successful!");
 
-    } catch (error) {
-        console.error("❌ Fetch Error:", error);
-        alert("Error registering. Please try again.");
-    }
-});
+//     } catch (error) {
+//         console.error("❌ Fetch Error:", error);
+//         alert("Error registering. Please try again.");
+//     }
+// });
 // document.getElementById("paperSubmissionForm").addEventListener("submit", async function(event) {
 //     event.preventDefault(); // Prevent page refresh
 
@@ -372,6 +372,104 @@ document.querySelector(".contact-form").addEventListener("submit", async functio
 //         alert("Submission failed! Please try again.");
 //     }
 // });
+
+
+
+const API_BASE_URL = window.location.hostname.includes("localhost")
+    ? "http://localhost:5000"  // Development Mode
+    : "https://conference-project-ejcd.onrender.com"; // Production Mode
+
+document.querySelector(".registration-form").addEventListener("submit", async function (event) {
+    event.preventDefault();
+
+    const formData = {
+        name: document.querySelector("input[placeholder='Name']").value,
+        paperId: document.querySelector("input[placeholder='Paper ID']").value,
+        paperTitle: document.querySelector("input[placeholder='Paper Title']").value,
+        institution: document.querySelector("input[placeholder='Institution/Organization Name']").value,
+        phone: document.querySelector("input[placeholder='Phone No']").value,
+        email: document.querySelector("input[placeholder='Email']").value,
+        amountPaid: document.querySelector("input[placeholder='Amount Paid']").value,
+        journalName: document.querySelector("input[placeholder='Publication Journal Name']").value,
+        feePaid: document.querySelector("input[placeholder='Registration Fee Paid']").value,
+        transactionId: document.querySelector("input[placeholder='Transaction ID']").value,
+        date: document.querySelector("input[type='date']").value
+    };
+
+    console.log("🚀 Form Data to be Sent:", formData);
+
+    try {
+        const response = await fetch(`${API_BASE_URL}/api/registrations/register`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(formData)
+        });
+
+        console.log("🚀 Fetch Response:", response);
+
+        const result = await response.json();
+        alert(result.message || "Registration Successful!");
+
+    } catch (error) {
+        console.error("❌ Fetch Error:", error);
+        alert("Error registering. Please try again.");
+    }
+});
+
+document.querySelector(".contact-form").addEventListener("submit", async function (event) {
+    event.preventDefault();
+
+    const formData = {
+        name: document.querySelector("input[placeholder='Your Name']").value,
+        email: document.querySelector("input[placeholder='Your Email']").value,
+        phoneNumber: document.querySelector("input[placeholder='Your Phone Number']").value,
+        message: document.querySelector("input[placeholder='Your Message']").value,
+    };
+
+    console.log("🚀 Form Data to be Sent to contact API:", formData);
+
+    try {
+        const response = await fetch(`${API_BASE_URL}/api/contact/contact`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(formData)
+        });
+
+        console.log("🚀 Fetch Response:", response);
+
+        const result = await response.json();
+        alert(result.message || "Message Sent Successfully!");
+
+    } catch (error) {
+        console.error("❌ Fetch Error:", error);
+        alert("Error sending message. Please try again.");
+    }
+});
+document.getElementById("paperSubmissionForm").addEventListener("submit", async function(event) {
+    event.preventDefault(); // Prevent page refresh
+
+    let formData = new FormData(this); // Collect form data
+
+    try {
+        let response = await fetch(`${API_BASE_URL}/submit/papersubmit`, { // Change URL if needed
+            method: "POST",
+            body: formData
+        });
+
+        let result = await response.json();
+
+        if (response.ok) {
+            alert("Form submitted successfully!");
+            console.log("Response:", result);
+        } else {
+            alert("Error submitting form: " + result.error);
+        }
+    } catch (error) {
+        console.error("Submission failed:", error);
+        alert("Submission failed! Please try again.");
+    }
+});
+
 // comitee
 document.addEventListener("DOMContentLoaded", function () {
     const details = document.querySelectorAll(".scientific-members h3, .scientific-members p");
@@ -482,3 +580,48 @@ window.onload = function() {
         image.classList.add("zoom");
     }
 };
+const wrapper = document.querySelector('.carousel-wrapper');
+const slides = document.querySelectorAll('.carousel-item');
+let index = 0;
+let autoSlideInterval;
+
+function showSlide(newIndex) {
+    if (newIndex >= slides.length) {
+        index = 0; // Loop back to first slide
+    } else if (newIndex < 0) {
+        index = slides.length - 1; // Loop to last slide
+    } else {
+        index = newIndex;
+    }
+
+    wrapper.style.transform = `translateX(-${index * 100}%)`;
+
+    // Remove active class from all, add to current
+    slides.forEach(slide => slide.classList.remove('active'));
+    slides[index].classList.add('active');
+}
+
+// Manual Controls
+function nextSlide() { 
+    showSlide(index + 1); 
+    resetAutoSlide();
+}
+
+function prevSlide() { 
+    showSlide(index - 1); 
+    resetAutoSlide();
+}
+
+// Auto-slide every 3s
+function startAutoSlide() {
+    autoSlideInterval = setInterval(() => showSlide(index + 1), 3000);
+}
+
+// Restart auto-slide on manual action
+function resetAutoSlide() {
+    clearInterval(autoSlideInterval);
+    startAutoSlide();
+}
+
+// Start auto-slide on page load
+startAutoSlide();

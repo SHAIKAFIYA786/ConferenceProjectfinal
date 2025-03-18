@@ -151,6 +151,7 @@
 
 .nav-links li {
     margin: 0 15px;
+    font-weight: bolder;
 }
 
 .nav-links a {
@@ -194,12 +195,11 @@
 }
 /* images animation */
 .container {
-    width: 100vw;   /* Full width of the screen */
+    width: 100%;   /* Full width of the screen */
     height: 50vh;   /* Half the height of the screen */
     display: flex;
     justify-content: center;
-    align-items: center;
-    background-color: black; /* Optional: Set background to avoid white gaps */
+    align-items: center; /* Optional: Set background to avoid white gaps */
 }
 
 .container img {
@@ -310,7 +310,53 @@
         transform: translateX(0);
     }
 }
+.carousel-container {
+    width: 100%;
+    height: 400px; /* Adjust height as needed */
+    position: relative;
+    overflow: hidden;
+}
 
+/* Wrapper for images */
+.carousel-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Individual slide */
+.carousel-item {
+    min-width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Images inside the carousel */
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image covers the full width */
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Zoom effect on the active image */
+.carousel-item.active img {
+    transform: scale(1.05);
+}
+
+/* Navigation buttons */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
 .footer {
     background-color: #7cb518;
     padding: 30px 0;
@@ -330,6 +376,10 @@
     flex: 1;
     min-width: 250px;
     margin: 10px;
+}
+.footer-section a{
+    color: white;
+     text-decoration: none;
 }
 
 .footer-section h3 {
