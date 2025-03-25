@@ -21,6 +21,19 @@
 // router.post("/submit/papersubmit", upload.single("file"), submitPaper);
 
 // module.exports = router;
+// const express = require("express");
+// const multer = require("multer");
+// const { storage } = require("../config/cloudinary"); // Import Cloudinary storage
+// const { submitPaper } = require("../controllers/paperController");
+
+// const router = express.Router();
+
+// const upload = multer({ storage }); // Use Cloudinary storage
+
+// // Define Route
+// router.post("/submit/papersubmit", upload.single("file"), submitPaper);
+
+// module.exports = router;
 const express = require("express");
 const multer = require("multer");
 const { storage } = require("../config/cloudinary"); // Import Cloudinary storage
@@ -31,6 +44,6 @@ const router = express.Router();
 const upload = multer({ storage }); // Use Cloudinary storage
 
 // Define Route
-router.post("/submit/papersubmit", upload.single("file"), submitPaper);
+router.post("/papersubmit", upload.single("file"), submitPaper);
 
 module.exports = router;

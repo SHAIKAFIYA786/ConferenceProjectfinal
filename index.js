@@ -206,7 +206,8 @@ const contactRoutes = require("./backend/routes/contactRoutes");
 const paperRoutes = require("./backend/routes/paperRoutes");
 const Contact = require("./backend/models/Contact");
 const Paper = require("./backend/models/Paper");
-
+const session = require("express-session");
+const flash = require("connect-flash");
 const app = express();
 
 // 🔹 Middleware
@@ -215,6 +216,22 @@ app.use(helmet());
 app.use(morgan("dev"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(
+    session({
+        secret: "anupriya", // Change this to a strong secret
+        resave: false,
+        saveUninitialized: true,
+        cookie: { maxAge: 60000 }, // Flash message will last for 60 seconds
+    })
+);
+app.use(flash());
+
+// 🔹 Pass Flash Messages to Views
+app.use((req, res, next) => {
+    res.locals.success_msg = req.flash("success_msg");
+    res.locals.error_msg = req.flash("error_msg");
+    next();
+});
 
 // 🔹 Connect to MongoDB
 connectDB();
