@@ -17,9 +17,9 @@ A professional **conference website** built using **Node.js, Express, MongoDB, H
 
 ## 📸 **Project Preview (Video Demo)**  
 
-[![Watch the Demo](assets/images/video-thumbnail.png)](https://youtu.be/vSY4uGhPW8M?si=oV9nso-q-8VtPcfb)  
+[![Watch the Demo](https://youtu.be/vSY4uGhPW8M?si=oV9nso-q-8VtPcfb)  
 
-Click the image above to watch the **full website demo**! 🚀  
+Click the  above Link  to watch the **full website demo**! 🚀  
 
 ---
 
