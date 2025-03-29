@@ -23,19 +23,6 @@ Click the  above Link  to watch the **full website demo**! 🚀
 
 ---
 
-## 🖼️ **Screenshots**  
-
-### 🏠 Homepage  
-![Homepage](assets/images/homepage.png)  
-
-### 🗓️ Event Schedule  
-![Schedule](assets/images/schedule.png)  
-
-### 👥 Speakers Page  
-![Speakers](assets/images/speakers.png)  
-
----
-
 ## 🛠️ **Tech Stack**  
 
 - **Frontend:** HTML, CSS, JavaScript  
