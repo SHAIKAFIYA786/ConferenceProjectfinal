@@ -5,7 +5,6 @@
     margin-left: 185px;
     padding: 20px;
 }
-
 .track-row {
     display: flex;
     justify-content: space-between;
@@ -87,5 +86,16 @@
     
     .track ul {
         margin-left: 15px; /* Adjust list margin for better mobile spacing */
+    }
+}
+@media (max-width: 768px) {
+    .footer-bottom {
+        text-align: center;
+        padding: 10px 5%;
+        font-size: 10px; /* Adjust font size for mobile */
+    }
+    .footer-bottom  p {
+        text-align: center;
+        padding-left: 20px;
     }
 }

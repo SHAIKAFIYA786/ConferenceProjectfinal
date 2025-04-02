@@ -63,7 +63,7 @@
 /* Contact Info Box */
 .contact-info {
     flex: 1;
-    background: #75a32d;
+    background:linear-gradient(to right, rgb(111, 152, 175), rgb(47, 108, 169), rgb(190, 190, 237));
     color: white;
     padding: 25px;
     border-radius: 10px;
@@ -175,6 +175,7 @@
     .contact-form,
     .contact-info {
         width: 100%;
+        text-align: center;
     }
     
     .contact-info {

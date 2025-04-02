@@ -4,7 +4,7 @@
 }
 /* navbar one */
 .contact-bar {
-    background-color: orangered;
+    background: linear-gradient(to right, rgb(123, 176, 203), rgb(167, 240, 248), rgb(182, 182, 236));
     color: white;
     padding: 10px 90px;
     display: flex;
@@ -136,7 +136,7 @@
 /* navabar */
 .navbar {
     width: 100%;
-    background-color:#7cb518;
+    background: linear-gradient(to right, rgb(111, 152, 175), rgb(47, 108, 169), rgb(190, 190, 237));
     padding: 20px 0px;
     position: relative; 
     z-index: 10;
@@ -162,20 +162,20 @@
 }
 
 .nav-links a:hover {
-    background:orangered;
+    background: linear-gradient(to right, rgb(136, 156, 242), rgb(158, 218, 238), rgb(124, 144, 183));
     border-radius: 5px;
 }
 .dropdown-menu {
     display: none;
     position: absolute;
-    background:#7cb518;
+    background:linear-gradient(to right, rgb(111, 152, 175), rgb(47, 108, 169), rgb(190, 190, 237));
     list-style: none;
     margin: 10px;
     /* color: black; */
 }
 .dropdown-menu ul li{
     padding: 10px;
-    background-color: orange;
+    background-color: rgb(186, 247, 244);
 }
 .dropdown:hover .dropdown-menu {
     display: block;
@@ -187,8 +187,8 @@
     padding: 20px;
     font-size: 24px;
     font-weight: bold;
-    background: linear-gradient(to right, #f0f0f0,#7cb518);
-    color: orangered;
+    background:linear-gradient(to right, #ECF0F1, #66a5c1);
+    color:#3861d4;
 }
 .registration-heading h2{
     margin-left: 15.5vw;
@@ -221,8 +221,8 @@
 /* Left Section */
 .left-section {
     width: 30%;
-    background-color: #a10202;
-    color: white;
+    background-color: #6878cf;
+    color: rgb(255, 255, 255);
     padding: 20px;
 }
 
@@ -232,7 +232,7 @@
 }
 
 .conference-box {
-    background-color: #2d3e50;
+    background-color: #5b8cbc;
     padding: 15px;
     margin: 15px 0;
     border-radius: 6px;
@@ -240,7 +240,7 @@
 
 .conference-box h4 {
     margin: 0;
-    color: #fdd835;
+    color: #c2f1f1;
 }
 
 .conference-box a, .conference-box p {
@@ -252,11 +252,12 @@
 /* Right Section */
 .right-section {
     width: 70%;
-    padding: 30px;
+    padding: 10px;
+    overflow: scroll;
 }
 
 .right-section h2 {
-    color: #e44d26;
+    color: #261aac;
 }
 
 .right-section p {
@@ -266,7 +267,7 @@
 }
 
 .know-more-btn {
-    background-color: #e44d26;
+    background-color: #1a9490;
     color: white;
     border: none;
     padding: 12px 20px;
@@ -277,7 +278,7 @@
 }
 
 .know-more-btn:hover {
-    background-color: #c0392b;
+    background-color: #4667c0;
 }
 /* conference conatiner Animation */
 .left-section {
@@ -358,7 +359,7 @@
 .prev { left: 10px; }
 .next { right: 10px; }
 .footer {
-    background-color: #7cb518;
+    background: linear-gradient(to right, rgb(111, 152, 175), rgb(47, 108, 169), rgb(190, 190, 237));
     padding: 30px 0;
     color: white;
     text-align: center;
@@ -405,7 +406,7 @@ td {
 }
 
 .highlight {
-    background-color: #e44d26;
+    background-color: #4b73ab;
     color: white;
     font-weight: bold;
 }
@@ -460,7 +461,7 @@ ul li::before {
 }
 
 .designer {
-    color: blue;
+    color: rgb(233, 164, 164);
     font-weight: bold;
     cursor: pointer;
 }
@@ -520,6 +521,17 @@ ul li::before {
     .navbar {
         display: none;
     }
+    .carousel-container{
+        display: none;
+    }
+    .right-section p{
+        justify-content: space-evenly;
+    }
+}
+@media screen and (max-width: 768px) {
+    .conference-section img {
+        display: none;
+    }
 }
 
 
@@ -536,15 +548,57 @@ ul li::before {
 @media screen and (max-width: 768px) {
     .conference-container1 {
         flex-direction: column;
+        margin: auto;
+         width: 100%;
+        padding: 20px;
     }
-
+    h1{
+        text-align: center;
+    }
+    
+    .right-section{
+        margin: 5px 0px;
+        /* border-radius: 0px; */
+    }
+    .carousel-container {
+        border: 4px sloid transparent;
+    }
     .left-section, .right-section {
         width: 100%;
-        padding: 20px;
+        /* padding-right: 20px; */
+        border-radius: 0px;
+    }
+    .left-section{
+        text-align: center;
     }
 
     .right-section h2 {
-        font-size: 20px;
+        font-size: 15px;
+    }
+    .right-section p{
+        line-height: normal;
+        text-align: justify;
+        font-size: 12px;
+    }
+    .conference-container1 {
+        width: 95%; /* Use more screen space */
+        padding: 10px;
+    }
+    h3{
+        color: red;
+    }
+    .left-section,
+    .right-section {
+        padding: 0px 20px;
+        font-size: 14px; /* Reduce font size if necessary */
+        button {
+             margin-top: 5px; /* Reduce button font size */
+        }
+    }
+    .conference-box{
+        margin: 5px 0;
+        padding: 10px;
+        text-wrap: wrap;
     }
 }
 
@@ -558,6 +612,7 @@ ul li::before {
     .footer-section {
         min-width: unset;
         margin: 10px 0;
+        font-size: 15px;
     }
 }
 
@@ -565,6 +620,9 @@ ul li::before {
 @media screen and (max-width: 768px) {
     .container {
         height: 40vh;
+    }
+    .carousel-container{
+        border: none;
     }
 }
 @keyframes zoomIn {
@@ -581,3 +639,54 @@ ul li::before {
     display: block; /* Ensures it takes up space */
     width: 100%; /* Ensures it doesn't get cut off */
 }
+
+    .carousel-container {
+        width: 100%;
+        height: 50vh;
+        overflow: hidden;
+        position: relative;
+        border-radius: 0px;
+        margin-bottom: 2px;
+    }
+
+    .carousel-video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+/* 
+    .video-container {
+        width: 100%;
+        height: 50vh;
+        position: relative;
+    }
+
+    .background-video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    } */
+    .video-container {
+        width: 100%;
+        height: 50vh; /* Full screen */
+        overflow: hidden;
+        position: relative;
+        background: black;
+        display: flex;
+        /* border:3px solid black; */
+
+    }
+
+    .background-video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ensures full video is visible */
+    }
+.right-section,.left-section{
+    padding: 10px;
+    border-radius: 10px;/* Light gray background */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+    padding-right: 20px;
+}
+

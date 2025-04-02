@@ -1,7 +1,7 @@
 /* Ensure this only applies to registration page */
 .navbar1 {
     width: 100%;
-    background-color:#7cb518;
+    background-color:#66a5c1;
     padding: 20px 10px;
     position: relative; 
     z-index: 10;
@@ -26,20 +26,20 @@
 }
 
 .nav-links a:hover {
-    background:orangered;
+    background:rgb(186, 229, 241);
     border-radius: 5px;
 }
 .dropdown-menu {
     display: none;
     position: absolute;
-    background:#7cb518;
+    background: #66a5c1;
     list-style: none;
     margin: 10px;
     /* color: black; */
 }
 .dropdown-menu ul li{
     padding: 10px;
-    background-color: orange;
+    background-color: rgb(158, 185, 212);
 }
 .dropdown:hover .dropdown-menu {
     display: block;
@@ -82,7 +82,7 @@
 }
 
 .registration-page .fee-table th {
-    background-color: #E65100;
+    background-color: #bba8e0;
     color: white;
 }
 
@@ -112,7 +112,7 @@
 }
 
 .submit-btn {
-    background-color: #8BC34A;
+    background-color: #9eefe7;
     color: white;
     padding: 12px;
     font-size: 18px;
@@ -128,8 +128,8 @@
     padding: 20px;
     font-size: 24px;
     font-weight: bold;
-    background: linear-gradient(to right, #f0f0f0,#7cb518);
-    color: orangered;
+    background: linear-gradient(to right, #f0f0f0,#97d5e9);
+    color:#66a5c1;
     padding-left: 150px;
 }
 .second{
@@ -137,7 +137,7 @@
 }
 .second h2{
     margin-bottom: 10px;
-    color: orangered;
+    color:#66a5c1;
 }
 /* Initially hide elements and position them slightly lower */
 .registration-page, p, table, .second, h2, .registration-form {
