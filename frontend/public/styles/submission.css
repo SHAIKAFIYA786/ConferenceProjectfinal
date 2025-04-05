@@ -18,7 +18,9 @@
 .paper-file-input {
     margin: 10px 0;
 }
-
+.registration-heading3{
+    padding-left: 87px;
+}
 .paper-submit-btn {
     width: 100%;
     padding: 12px;
